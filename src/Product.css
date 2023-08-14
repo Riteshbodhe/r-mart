@@ -10,6 +10,14 @@
     min-width: 100px;
     background-color: white;
     z-index: 1;
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
+   
+}
+.product:hover{
+
+        transform: scale(1.1);
+  
 }
 
 .product__rating {
@@ -27,8 +35,20 @@
     background: #f0c14b;
     border: 1px solid;
     margin-top: 10px;
-    border-color: #a88734 #9c7e31 #846a29;
+    border-color: transparent;
     color: #111;
+   
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 5px;
+}
+.product>button:hover{
+ background:#ECB11C ;
+ cursor: pointer;
+}
+.product>button:active{
+    box-shadow: 0 2px #666;
+        transform: translateY(4px);
+   
 }
 
 .product__price {
@@ -39,3 +59,4 @@
     height: 100px;
     margin-bottom: 15px;
 }
+

@@ -6,6 +6,7 @@
     position: sticky;
     top: 0;
     z-index:100;
+   
 }
 .header__logo{
     width: 100px;
@@ -13,6 +14,10 @@
     margin: 0 20px;
     margin-top: 10px;
 }
+.header__logo:hover{
+    transform : scale(1.1);
+}
+
 .header__search{
     display: flex;  
     flex: 1;
@@ -44,6 +49,14 @@
     color: white;
 
 }
+.header__optionBasket:hover{
+
+    transform:scale(0.8) ;
+}
+.header__optionBasket:active{
+  
+    transform: translateY(4px);
+}
 .header__basketCount{
     margin-left: 10px;
     margin-right: 10px;
@@ -58,5 +71,32 @@
     margin-left: 10px;
     margin-right: 10px;
     color: white;
-
 }
+
+.header__option:hover {
+    transform:scale(0.8);
+}
+
+.header__option:active{
+        transform: translateY(4px);
+}
+
+a:-webkit-any-link {
+    cursor:pointer;
+    text-decoration: none;
+    
+}
+
+
+@media (max-width:401px) {
+    .header {
+        width: 100vw;
+    }
+}
+@media (max-width:530px){
+     .header__search{
+        display:none;
+    }
+}
+
+

@@ -1,11 +1,12 @@
 import React from 'react';
 import './Header.css';
 import SearchIcon from '@mui/icons-material/Search';
-import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
 import logo from "./img/logo.png"
 import { auth } from "./firebase";
+
 
 function Header() {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -20,7 +21,6 @@ function Header() {
       <Link to="/">
         <img
           className="header__logo"
-         // src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
          src={logo} alt=""
         />
       </Link>
@@ -39,22 +39,16 @@ function Header() {
           </div>
         </Link>
 
-          
+        <Link to='/orders'>
           <div className="header__option">
             <span className="header__option1">Returns</span>
             <span className="header__option2">& Orders</span>
           </div>
+        </Link>
         
-        
-
-        <div className="header__option">
-          <span className="header__option1">Your</span>
-          <span className="header__option2">Prime</span>
-        </div>
-
         <Link to="/checkout">
           <div className="header__optionBasket">
-            <ShoppingBasketIcon />
+            <ShoppingCartIcon />
             <span className="header__option2 header__basketCount">
               {basket?.length}
             </span>

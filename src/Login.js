@@ -37,7 +37,6 @@ function Login() {
             <Link to='/'>
                 <img
                     className="login__logo"
-                    //src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png' 
                     src={logo2} alt=""
                 />
             </Link>
@@ -52,17 +51,17 @@ function Login() {
                     <h5>Password</h5>
                     <input type='password' value={password} onChange={e => setPassword(e.target.value)} />
 
-                    <button type='submit' onClick={signIn} className='login__signInButton'>Sign In</button>
+                    <button type='submit' onClick={signIn} className='login__signInButton'>Sign-In</button>
                 </form>
 
                 <p>
-                    <h3>DemoEmail = testuser@r-mart.com</h3>
-                    <h3>Password = Test@123</h3>
-                    By signing-in you agree to the R-MART Conditions of Use & Sale. Please
-                    see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice.
+                    <h3>DemoEmail =testuser@r-mart.com</h3>
+                    <h3>Password =Test@123</h3>
+                   To create new account Enter E-mail and passsword above and then
+                   Click on Create your account button below, Use that E-mail and password to sign-in.
                 </p>
 
-                <button onClick={register} className='login__registerButton'>Create your Amazon Account</button>
+                <button onClick={register} className='login__registerButton'>Create your Account</button>
             </div>
         </div>
     )
